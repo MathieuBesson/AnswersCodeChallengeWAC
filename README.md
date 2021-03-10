@@ -12,4 +12,4 @@
 <!-- ABOUT THE PROJECT -->
 ## Mes solutions
 
-Retrouver dans completed.php mes réponses aux challenges terminés et dans rework.php mes réponses à refactorer.
+Retrouvez dans completed.php mes réponses aux challenges terminés et dans rework.php mes réponses à refactorer.
