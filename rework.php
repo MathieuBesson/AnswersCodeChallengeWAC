@@ -1,23 +1,15 @@
-<?php 
+<?php
 
-include('Classes/Game.php');
+require "vendor/autoload.php"; 
 
-include('Classes/Vegeta.php');
-include('Classes/Sac.php');
-include('Classes/WallE.php');
-include('Classes/Map.php');
-include('Classes/Coffre.php');
-include('Classes/Code.php');
-include('Classes/Poker.php');
-include('Classes/Daenerys.php');
-include('Classes/LaraCroft.php');
-include('Classes/ShiFuMi.php');
-include('Classes/Batman.php');
-include('Classes/AttaqueTitans/Titan.php');
-include('Classes/AttaqueTitans/Levy.php');
-include('Classes/AttaqueTitans/Habitation.php');
-include('Classes/AttaqueTitans/Titans.php');
-include('Classes/AttaqueTitans/Habitations.php');
+use Classes\Game;
+use Classes\LaraCroft;
+use Classes\Poker;
+use Classes\AttaqueTitans\Titan;
+use Classes\AttaqueTitans\Levy;
+use Classes\AttaqueTitans\Habitation;
+use Classes\AttaqueTitans\Titans;
+use Classes\AttaqueTitans\Habitations;
 
 
 // ---------------------- Challenge Poker => POKER_1 !!!!!!!!!!!!!!!!!!!! Challenge à retravailler
@@ -67,34 +59,34 @@ include('Classes/AttaqueTitans/Habitations.php');
 // ---------------------- Attaque des Titans => ATTACK_OF_TITANS !!!!!!!!!!!!!!!!!!!! Challenge à retravailler
 
 
-// $data = [
-//     'titans' => ["25;6;1352", "17;8;1228", "22;5;992", "19;7;1205", "15;5;679"],
-//     'habitations' => ["8;49", "23;47", "10;27"],
-//     'gaz' => 1463
-// ];
+$data = [
+    'titans' => ["25;6;1352", "17;8;1228", "22;5;992", "19;7;1205", "15;5;679"],
+    'habitations' => ["8;49", "23;47", "10;27"],
+    'gaz' => 1463
+];
 
 
 
-// $levy = new Levy($data['gaz']);
+$levy = new Levy($data['gaz']);
 
-// $habitations = [];
-// foreach($data['habitations'] as $habitation){
-//     array_push($habitations, new Habitation($habitation));
-// }
+$habitations = [];
+foreach($data['habitations'] as $habitation){
+    array_push($habitations, new Habitation($habitation));
+}
 
-// $habitations = new Habitations($data['habitations']);
+$habitations = new Habitations($data['habitations']);
 
-// $titans = new Titans($data['titans']);
+$titans = new Titans($data['titans']);
 
-// $titan = $titans->findBiggestTitan();
+$titan = $titans->findBiggestTitan();
 
-// dump($habitations->findBestHabitation($titan));
+dump($habitations->findBestHabitation($titan));
 
 
 
-// // dd($data);
-// dump($titan);
-// dump($habitations);	
+// dd($data);
+dump($titan);
+dump($habitations);	
 
 
 
@@ -491,9 +483,53 @@ include('Classes/AttaqueTitans/Habitations.php');
 
 
 
-// if ($compo == 3-8-12-7-9-18-14-19-13-11-6) {
+// if ($compo == "3-8-12-7-9-18-14-19-13-11-6") {
 //     echo '<h1 style="color: green">Gagné</h1>';
 // } else {
 //     echo '<h1 style="color: red">KO : ' . $kms . '</h1>';
 // }
 
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------- Bulma et la Capsule Corp. => DBZ_2
+
+// $data = [
+//     'objets' => ["VCPTFULQN-529", "QSZFYLLHXTCF-511", "QOMPRGXTAGIK-291", "JKXXYDNW-386", "WQDZVDKHE-234", "QQFYRMALJNMN-263", "KYLSFYRZROEA-483", "QSXPOZ-189", "MEYWKWHM-351", "IIOOCZGHFFLA-419", "WGCTYRJGOCL-467", "SZYCRB-364", "MGOHTZBR-244", "ZQIOPEQMNYU-227", "DTCLUJUX-346", "EIGWIZDFPQPW-204", "JOZYVZBY-509", "PRMIJTHZ-479", "OZQJHNALUXZY-274", "VVEOTZ-436", "SEUIFRVYORU-522", "OJQYJLP-297", "ZDTVNNHIQQE-454", "ZOWKUKQE-228", "AQOJBGTZ-307", "CCZCJY-183", "BNALMMG-544", "HNUKCIBA-456", "TXACHKVFADF-496", "HKGZWVBCOGRY-292", "VGHAXKA-486", "CSBGENUNZML-227", "RHOQWVGLI-510", "VWVVDX-219", "QDFIRP-337", "BSXXHX-288", "GEYKKR-210", "RRZOBQYO-540", "YKXNFFH-252", "LDXNPZXGRLGN-224", "XEVACPQ-546", "FRTQIJUGCF-458", "VXQTVDDYAZGG-166", "IUPMNEYRL-513", "JSZCYCFBYWTY-205", "AJMKVPBABUC-455", "KERFZBJHD-242", "IGGMGA-511", "SYKTDVISLTHH-106", "MNEYGSM-379", "GILMELIH-141", "CWIHAH-521", "XLUNIXHGWJKG-299", "YTPZFRGHKOG-294", "UCLHWALELA-250", "ELLIFOW-312", "TCJXAHXKRWSA-468", "ZRTKEWYF-123", "QIKYIPS-231", "KQUADNBX-305", "AFOBWXEWVRRA-337", "WQSOKLKIQ-134", "FQUREVL-271", "LXMEBKGYZ-102", "GUEFNU-548", "LYUAESMSEDKN-452", "UMMUVUQU-159", "TWZFQZX-124", "JKAEJDXOJV-200", "IGXHJNHJVS-541"],
+
+//     'capsules' => ["ZLFP-22", "UCLA-25", "INUP-14", "SYHH-10", "CZUV-16", "YKFH-37", "BLNY-55", "YKFH-25", "FPDI-27", "GJGO-13"]
+// ];
+
+// dump($data);
+
+// $bulma = new Bulma($data['objets'], $data['capsules']);
+
+// $result = $bulma->getResult();
+
+// dump($result);
+
+// if ($result == 608) {
+//     echo '<h1 style="color: green">Gagné</h1>';
+// } else {
+//     echo '<h1 style="color: red">KO : ' . $result  . '</h1>';
+
+// }
+
+
+
+
+
+
+
+
+
+ 

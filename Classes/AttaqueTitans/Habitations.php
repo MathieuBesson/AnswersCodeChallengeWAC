@@ -1,5 +1,5 @@
 <?php
-
+namespace Classes\AttaqueTitans;
 
 class Habitations 
 {

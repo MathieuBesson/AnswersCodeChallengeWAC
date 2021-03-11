@@ -1,5 +1,5 @@
 <?php
-
+namespace Classes\AttaqueTitans;
 
 class Titans 
 {
@@ -8,8 +8,6 @@ class Titans
     public function __construct($datasTitans)
     {
         $this->titans = $this->sortTitans($datasTitans);
-        // dd($this->titans); 
-        // die;
     }
 
     private function comparator($object1, $object2) { 

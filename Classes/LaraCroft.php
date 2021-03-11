@@ -1,4 +1,5 @@
 <?php
+namespace Classes;
 
 // Haut    => A => H
 // Bas     => V => B

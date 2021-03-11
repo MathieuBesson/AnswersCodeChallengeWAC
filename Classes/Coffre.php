@@ -1,4 +1,5 @@
 <?php
+namespace Classes;
 
 define('PLUS', '+');
 define('MOINS', '-');

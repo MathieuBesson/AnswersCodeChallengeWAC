@@ -1,4 +1,5 @@
 <?php
+namespace Classes;
 // define('TYPE_PAIRE', 2);
 // define('TYPE_BRELAN', 3);
 // define('TYPE_CARRE', 4);

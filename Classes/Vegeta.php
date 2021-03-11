@@ -1,4 +1,5 @@
 <?php 
+namespace Classes;
 
 class Vegeta {
     private $force; 
@@ -8,7 +9,6 @@ class Vegeta {
     public function __construct($force)
     {
         $this->force = $force;
-        $this->calculPuissance();
     }
 
     public function fight($ennemi)
@@ -34,6 +34,7 @@ class Vegeta {
 
     public function __toString()
     {
+        $this->calculPuissance();
         return $this->getPuissance();
     }
 }

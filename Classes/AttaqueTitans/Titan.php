@@ -1,4 +1,5 @@
 <?php
+namespace Classes\AttaqueTitans;
 
 
 class Titan 

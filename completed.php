@@ -1,27 +1,23 @@
 <?php
 
-include('Classes/Game.php');
+require "vendor/autoload.php"; 
 
-include('Classes/Vegeta.php');
-include('Classes/Sac.php');
-include('Classes/WallE.php');
-include('Classes/Map.php');
-include('Classes/Coffre.php');
-include('Classes/Code.php');
-include('Classes/Poker.php');
-include('Classes/Daenerys.php');
-include('Classes/LaraCroft.php');
-include('Classes/ShiFuMi.php');
-include('Classes/Batman.php');
-include('Classes/AttaqueTitans/Titan.php');
-include('Classes/AttaqueTitans/Levy.php');
-include('Classes/AttaqueTitans/Habitation.php');
-include('Classes/AttaqueTitans/Titans.php');
-include('Classes/AttaqueTitans/Habitations.php');
+use Classes\Game;
+use Classes\ShiFuMi;
+use Classes\Vegeta;
+use Classes\Objets;
+use Classes\Sac;
+use Classes\WallE;
+use Classes\Map;
+use Classes\Coffre;
+use Classes\Armee;
+use Classes\Troupe;
+use Classes\Code;
+use Classes\Batman;
+use Classes\Bulma;
 
 
 // Reste à traiter
-// --------------------- Bulma et la Capsule Corp. => DBZ_2
 // --------------------- Break the code #2 => CRYPTO_3
 // --------------------- WALL-E #3 => WALL_E_3
 // --------------------- Code César => SECRET_1
@@ -75,7 +71,7 @@ if($result == 'CPCFFF'){
 // Set de données
 $data = [
     'ennemis' => [232, 306, 614, 795, 942, 976, 987, 1020, 1153, 1258, 1285, 1304, 1395],
-    'vegeta' => 175,
+    'force_vegeta' => 175,
     'niveau' => 1
 ];
 
@@ -224,7 +220,7 @@ dump($data);
 $coffre = new Coffre($data['depart'], $data['chemin']);
 $result = $coffre->getCombinaison();
 
-dump($resut);
+dump($result);
 
 // Test avec le set de données
 if ($result == 181465) {
@@ -329,6 +325,29 @@ if ($result == 'DDDDDDDDDDDDDDDFFDDDFFFFDDDDDFFFDDDDDDDFFFFFDDFFFFF') {
 
 
 
+
+
+// ---------------------- Bulma et la Capsule Corp. => DBZ_2
+
+$data = [
+    'objets' => ["VCPTFULQN-529", "QSZFYLLHXTCF-511", "QOMPRGXTAGIK-291", "JKXXYDNW-386", "WQDZVDKHE-234", "QQFYRMALJNMN-263", "KYLSFYRZROEA-483", "QSXPOZ-189", "MEYWKWHM-351", "IIOOCZGHFFLA-419", "WGCTYRJGOCL-467", "SZYCRB-364", "MGOHTZBR-244", "ZQIOPEQMNYU-227", "DTCLUJUX-346", "EIGWIZDFPQPW-204", "JOZYVZBY-509", "PRMIJTHZ-479", "OZQJHNALUXZY-274", "VVEOTZ-436", "SEUIFRVYORU-522", "OJQYJLP-297", "ZDTVNNHIQQE-454", "ZOWKUKQE-228", "AQOJBGTZ-307", "CCZCJY-183", "BNALMMG-544", "HNUKCIBA-456", "TXACHKVFADF-496", "HKGZWVBCOGRY-292", "VGHAXKA-486", "CSBGENUNZML-227", "RHOQWVGLI-510", "VWVVDX-219", "QDFIRP-337", "BSXXHX-288", "GEYKKR-210", "RRZOBQYO-540", "YKXNFFH-252", "LDXNPZXGRLGN-224", "XEVACPQ-546", "FRTQIJUGCF-458", "VXQTVDDYAZGG-166", "IUPMNEYRL-513", "JSZCYCFBYWTY-205", "AJMKVPBABUC-455", "KERFZBJHD-242", "IGGMGA-511", "SYKTDVISLTHH-106", "MNEYGSM-379", "GILMELIH-141", "CWIHAH-521", "XLUNIXHGWJKG-299", "YTPZFRGHKOG-294", "UCLHWALELA-250", "ELLIFOW-312", "TCJXAHXKRWSA-468", "ZRTKEWYF-123", "QIKYIPS-231", "KQUADNBX-305", "AFOBWXEWVRRA-337", "WQSOKLKIQ-134", "FQUREVL-271", "LXMEBKGYZ-102", "GUEFNU-548", "LYUAESMSEDKN-452", "UMMUVUQU-159", "TWZFQZX-124", "JKAEJDXOJV-200", "IGXHJNHJVS-541"],
+
+    'capsules' => ["ZLFP-22", "UCLA-25", "INUP-14", "SYHH-10", "CZUV-16", "YKFH-37", "BLNY-55", "YKFH-25", "FPDI-27", "GJGO-13"]
+];
+
+dump($data);
+
+$bulma = new Bulma($data['objets'], $data['capsules']);
+
+$result = $bulma->getResult();
+
+dump($result);
+
+if ($result == 608) {
+    echo '<h1 style="color: green">Gagné</h1>';
+} else {
+    echo '<h1 style="color: red">KO : ' . $result  . '</h1>';
+}
 
 
 
